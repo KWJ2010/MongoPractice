@@ -13,7 +13,7 @@ namespace MongoPractice
     {
         static void Main(string[] args)
         {
-            MainAsync(args).Wait();
+           MainAsync(args).Wait();
             Console.WriteLine("Press Enter");
             Console.ReadLine();
         }
@@ -65,15 +65,8 @@ namespace MongoPractice
             //await col.Find(new BsonDocument()).ForEachAsync(doc => Console.WriteLine(doc));
             #endregion
 
-            //student.scores["type": "homework" ]
-            //foreach student, sort homework lowest to highest, drop first, then search db for highest hw grade
 
 
-            var list = await col.Find(new BsonDocument())
-                .Sort("{scores.type: 1}")
-                .ToListAsync();
-
-
-    }
+        }
     }
 }
